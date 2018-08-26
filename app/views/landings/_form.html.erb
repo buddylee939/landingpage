@@ -1,0 +1,20 @@
+<%= form_with(model: landing, local: true) do |form| %>
+  <% if landing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(landing.errors.count, "error") %> prohibited this landing from being saved:</h2>
+
+      <ul>
+      <% landing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="input-group">
+    <%= form.text_field :email, label: false, placeholder: "Email"%>
+  </div>
+  <div>
+    <%= form.submit "Notify Me", class: "btn-custom" %>
+  </div>  
+<% end %>

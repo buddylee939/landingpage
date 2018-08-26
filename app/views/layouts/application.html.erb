@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LandingPage</title>
+    <meta name="description" content="Demo - Fullscreen Landing Page" />
+    <meta name="keywords" content="open, source, fullscreen, image, coming, soon, pre, launch, landing, page, construction, lead, generation, rails, collect, email, sign-up, collection, beta, code, free, demo, tutorial, github" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body id="background-image">
+    <%= yield %>
+    <%= render 'shared/footer' %>
+  </body>
+</html>
